@@ -1,5 +1,5 @@
 var socket;
-socket = io.connect('http://148.71.6.83:80/')
+socket = io.connect('http://192.169.7.33:80/')
 socket.on('mouse', newMsg);
 function newMsg(idx, data){
     console.log(idx);
