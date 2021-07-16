@@ -11,13 +11,14 @@ socket = io.connect('http://localhost:80/');
 //S.CON
 console.log(socket);
 socket.on('newPlayer', newPMsg);
-function newPMsg(idx, rndInt, allPlayers){
-    console.log(allPlayers);
-    console.log('New Player: '+idx+' going to: '+rndInt);
-    players.push(new Player(rndInt, rndInt));
+function newPMsg(tpdata){
+    console.log(tpdata);
+    //console.log(tpdata[socket.id]);
+    //console.log('New Player: '+idx+' going to: '+rndInt);
+    //players.push(new Player(tpdata[i], tpdata[i]));
 }
 //PLAYEWR
-const players = [];
+let players = [];
 const cellSize = 100;
 let frame = 0;
 
@@ -55,58 +56,3 @@ function animate() {
           
 }
 animate();
-//K
-function keydown(e) {
-    console.log(e.keyCode);
-    var data = e.keyCode;
-    //K.S
-    socket.emit('keyB1', data);
-}
-document.addEventListener('keydown', keydown);
-//K.S
-socket.on('keyB2', newMsgk);
-function newMsgk(idx, data){
-    console.log(idx);
-    console.log(data);
-}
-//M
-const mouse = {
-    x: undefined,
-    y: undefined,
-    width: 0.1,
-    height: 0.1,
-}
-//M.C
-canvas.addEventListener('mousemove', function(e){
-    mouse.x = e.x - canvasPos.left;
-    mouse.y = e.y - canvasPos.top;
-    console.log('Mouse X , Y : ' + mouse.x + ' , ' + mouse.y);
-    var data = {
-        x: mouse.x,
-        y: mouse.y
-    }
-    //M.S
-    socket.emit('mouse', data);
-})
-canvas.addEventListener('mouseleave', function(){
-    mouse.x = undefined;
-    mouse.y = undefined;
-})
-//M.S
-socket.on('mouse', newMsg);
-function newMsg(idx, data){
-    console.log(idx);
-    console.log(data);
-}
-//q
-function collision(first, second){
-    if(
-        !(  first.x > second.x + second.width ||
-            first.x + first.width < second.x || 
-            first.y > second.y + second.height ||
-            first.y + first.height < second.y)
-    ){
-        return true;
-
-    };
-};
