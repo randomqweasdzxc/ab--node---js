@@ -1,5 +1,11 @@
 # node--js--connect--events
-## - v1
+## - v-1-1
+- cleaned some useless stuff atm
+- earlier todo must be done is diferent events?
+- client connect handle of who is connected, array of ids as strings,
+- client disconnect splice data array handle
+- array of objects? each object contains id and position? 
+## - v1-0
 - connect disconnect event
 - client array 
 - push pop
