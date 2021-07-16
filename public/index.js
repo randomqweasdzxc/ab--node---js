@@ -7,7 +7,7 @@ let canvasPos = canvas.getBoundingClientRect();
 console.log(canvasPos);
 //S
 var socket;
-socket = io.connect('http://148.71.6.83:80/');
+socket = io.connect('http://localhost:80/');
 //S.CON
 console.log(socket);
 socket.on('newPlayer', newPMsg);
