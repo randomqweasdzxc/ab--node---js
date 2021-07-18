@@ -1,6 +1,6 @@
 # node--js--connect--events
 ## - ?
-   - draw a squares
+   - draws a square
    - at random position 
    - for each client
    - new clients draw connected clients
