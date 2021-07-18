@@ -29,7 +29,7 @@ function animate() {
 }
 animate()
 //NODE
-var socket = io.connect('http://148.71.6.83:80/')
+var socket = io.connect('http://localhost:80/')
 socket.on('otherclients', drawothers)
 function drawothers(sxa, sya) {
     for (let i = 0; i< sxa.length; i++) {
