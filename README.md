@@ -3,7 +3,7 @@
    - draw a squares
    - at random position 
    - for each client
-   - new clients load olders clients if they exit
+   - new clients draw connected clients
    - sqares pop when client disconnect
 ## - "dependencies": { }
    - "express": "^4.17.1",
