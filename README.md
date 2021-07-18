@@ -8,4 +8,4 @@
 ## - "dependencies": { }
    - "express": "^4.17.1",
    - "socket.io": "^4.1.3"
-   - "@types/node": "^16.3.2"
+   - "devDependencies":{"@types/node": "^16.3.2"}
