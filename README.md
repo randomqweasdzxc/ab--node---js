@@ -1,8 +1,8 @@
 # node--js--connect--events
-## - ?
-   - draws a square
-   - at random position 
-   - for each client
+## - 21/7/2021
+   - added movement and drawing to all clients
+## - 18/7/2021
+   - draws a square, at random position, for each client
    - new clients draw connected clients
    - sqares pop when client disconnects
 ## - "dependencies": { }
